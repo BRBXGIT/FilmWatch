@@ -13,6 +13,7 @@ val Gainsboro = Color(0xffd5d5d5)
 val DimGray = Color(0xff9a9a9a)
 val SlateGray = Color(0xff747474)
 val NeutralGray = Color(0xff9e9e9e)
+val CharcoalGray = Color(0xff606060)
 
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)

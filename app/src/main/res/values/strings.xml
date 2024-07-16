@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">FilmWatch</string>
-    <string name="access_token_auth">eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZTZkZTEzODk1ODNmMDQ3YzQyYWNhNTE1NTkyMDBmNCIsIm5iZiI6MTcyMTA4OTUwNC41MTcxMTUsInN1YiI6IjY2OTViN2JlMGUyYTVjODkwMGE2MGE5NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xhXXZZdDiu4r42mASH9eA3PnFxTHm2ZcQv7AUFvLjaI</string>
-    <string name="api_key_auth">5e6de1389583f047c42aca51559200f4</string>
 </resources>

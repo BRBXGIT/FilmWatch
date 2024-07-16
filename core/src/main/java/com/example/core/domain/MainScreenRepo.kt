@@ -5,5 +5,5 @@ import retrofit2.Response
 
 interface MainScreenRepo {
 
-    suspend fun getAllMovies(page: Int, apiKey: String): Response<MoviesResponse>
+    suspend fun getAllMovies(page: Int): Response<MoviesResponse>
 }

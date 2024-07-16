@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    //Navigation
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -50,6 +52,10 @@ android {
 }
 
 dependencies {
+
+    //Nav impl
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 
     //Basic impl
     implementation(libs.androidx.core.ktx)

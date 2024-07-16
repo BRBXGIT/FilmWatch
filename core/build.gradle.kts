@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    //Ksp
+    id("com.google.devtools.ksp")
+    //Hilt
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -36,6 +40,17 @@ dependencies {
 
     //Connecting module to project
     implementation(project(":core"))
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    //Hilt impl
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    //Room db impl
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
     //Basic impl
     implementation(libs.androidx.core.ktx)

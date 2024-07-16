@@ -1,6 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    //Navigation
+    alias(libs.plugins.kotlin.serialization)
+    //Ksp
+    id("com.google.devtools.ksp")
+    //Hilt
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -42,6 +48,14 @@ dependencies {
 
     //Connecting module to project
     implementation(project(":feature"))
+
+    //Hilt impl
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    //Nav impl
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 
     //Basic impl
     implementation(libs.androidx.core.ktx)

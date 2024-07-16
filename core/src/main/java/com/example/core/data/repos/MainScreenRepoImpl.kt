@@ -11,11 +11,13 @@ import javax.inject.Inject
 
 class MainScreenRepoImpl @Inject constructor(
     private val mainScreenApiInstance: MainScreenApiInstance,
-    @ApplicationContext private val context: Context
+    context: Context
 ): MainScreenRepo {
 
+    private val accessToken = context.getText(R.string.access_token_auth).toString()
+
+    //Getting all latest movies by page
     override suspend fun getAllMovies(page: Int): Response<MoviesResponse> {
-        val apiKey = context.getText(R.string.access_token_auth)
-        return mainScreenApiInstance.getAllMovies(page, apiKey.toString())
+        return mainScreenApiInstance.getAllMovies(page, accessToken)
     }
 }

@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "FilmWatch"
 include(":app")
 include(":core")
+include(":feature")

@@ -5,7 +5,6 @@ import com.example.core.R
 import com.example.core.data.models.MoviesResponse
 import com.example.core.data.network.MainScreenApiInstance
 import com.example.core.domain.MainScreenRepo
-import dagger.hilt.android.qualifiers.ApplicationContext
 import retrofit2.Response
 import javax.inject.Inject
 

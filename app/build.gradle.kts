@@ -57,6 +57,10 @@ android {
 
 dependencies {
 
+    //Connecting modules to project
+    implementation(project(":feature"))
+    implementation(project(":core"))
+
     //Nav impl
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)

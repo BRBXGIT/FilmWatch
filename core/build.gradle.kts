@@ -38,9 +38,6 @@ android {
 
 dependencies {
 
-    //Connecting module to project
-    implementation(project(":core"))
-
     //Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)

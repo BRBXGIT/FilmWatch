@@ -20,7 +20,7 @@ object MainScreenModule {
 
     @Provides
     @Singleton
-    fun provideMainScreenApiInstance() {
+    fun provideMainScreenApiInstance(): MainScreenApiInstance {
         return Retrofit.Builder()
             .baseUrl("https://api.themoviedb.org/3")
             .addConverterFactory(GsonConverterFactory.create())

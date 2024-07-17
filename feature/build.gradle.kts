@@ -46,9 +46,6 @@ android {
 
 dependencies {
 
-    //Connecting module to project
-    implementation(project(":feature"))
-
     //Hilt impl
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)

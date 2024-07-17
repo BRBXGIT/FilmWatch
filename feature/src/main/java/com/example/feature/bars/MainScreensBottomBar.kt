@@ -52,7 +52,7 @@ fun MainScreensBottomBar(
     )
 
     val currentDestination by navController.currentBackStackEntryAsState()
-    val currentRoute = currentDestination?.destination?.route.toString().drop(30)
+    val currentRoute = if(currentDestination != null) currentDestination?.destination?.route.toString().split(".")[6] else "MainScreenRoute"
     BottomAppBar(
         tonalElevation = 0.dp
     ) {

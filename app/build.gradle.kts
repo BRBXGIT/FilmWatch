@@ -57,9 +57,8 @@ android {
 
 dependencies {
 
-    //Connecting modules to project
+    //Connect feature module
     implementation(project(":feature"))
-    implementation(project(":core"))
 
     //Nav impl
     implementation(libs.navigation.compose)

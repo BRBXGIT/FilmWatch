@@ -46,6 +46,9 @@ android {
 
 dependencies {
 
+    //Connect core module
+    implementation(project(":core"))
+
     //Hilt impl
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
@@ -53,6 +56,9 @@ dependencies {
     //Nav impl
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
+    //Paging impl
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.paging.runtime.ktx)
 
     //Basic impl
     implementation(libs.androidx.core.ktx)

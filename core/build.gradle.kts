@@ -48,6 +48,9 @@ dependencies {
     //Room db impl
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
+    //Paging impl
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.paging.runtime.ktx)
 
     //Basic impl
     implementation(libs.androidx.core.ktx)

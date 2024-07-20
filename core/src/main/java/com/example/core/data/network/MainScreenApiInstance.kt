@@ -11,5 +11,5 @@ interface MainScreenApiInstance {
     suspend fun getAllMovies(
         @Query("page") page: Int,
         @Query("api_key") apiKey: String
-    ): Response<MoviesResponse>
+    ): MoviesResponse
 }

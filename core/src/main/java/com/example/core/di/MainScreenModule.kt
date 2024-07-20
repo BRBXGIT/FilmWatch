@@ -31,9 +31,8 @@ object MainScreenModule {
     @Provides
     @Singleton
     fun provideMainScreenRepo(
-        mainScreenApiInstance: MainScreenApiInstance,
-        @ApplicationContext context: Context
+        mainScreenApiInstance: MainScreenApiInstance
     ): MainScreenRepo {
-        return MainScreenRepoImpl(mainScreenApiInstance, context)
+        return MainScreenRepoImpl(mainScreenApiInstance)
     }
 }

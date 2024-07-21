@@ -1,9 +1,11 @@
 package com.example.core.domain
 
+import androidx.paging.PagingData
+import com.example.core.data.models.Movie
 import com.example.core.data.models.MoviesResponse
-import retrofit2.Response
+import kotlinx.coroutines.flow.Flow
 
 interface MainScreenRepo {
 
-    suspend fun getAllMovies(page: Int): MoviesResponse
+    fun getAllMovies(): Flow<PagingData<Movie>>
 }

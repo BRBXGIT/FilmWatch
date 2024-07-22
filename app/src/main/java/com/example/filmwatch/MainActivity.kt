@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.feature.navigation.NavGraph
-import com.example.filmwatch.ui.theme.FilmWatchTheme
+import com.example.core.ui.theme.FilmWatchTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

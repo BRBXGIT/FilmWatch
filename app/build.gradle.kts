@@ -59,6 +59,7 @@ dependencies {
 
     //Connect feature module
     implementation(project(":feature"))
+    implementation(project(":core"))
 
     //Nav impl
     implementation(libs.navigation.compose)

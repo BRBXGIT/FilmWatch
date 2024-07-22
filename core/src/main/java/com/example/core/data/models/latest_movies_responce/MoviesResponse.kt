@@ -1,4 +1,4 @@
-package com.example.core.data.models
+package com.example.core.data.models.latest_movies_responce
 
 import com.google.gson.annotations.SerializedName
 

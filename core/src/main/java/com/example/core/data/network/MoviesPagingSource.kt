@@ -2,7 +2,7 @@ package com.example.core.data.network
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.core.data.models.Movie
+import com.example.core.data.models.latest_movies_responce.Movie
 import com.example.core.utils.Utils
 import retrofit2.HttpException
 import java.io.IOException

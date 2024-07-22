@@ -59,6 +59,8 @@ dependencies {
     //Paging impl
     implementation(libs.androidx.paging.compose)
     implementation(libs.androidx.paging.runtime.ktx)
+    //Coil impl
+    implementation(libs.coil.compose)
 
     //Basic impl
     implementation(libs.androidx.core.ktx)

@@ -1,7 +1,6 @@
 package com.example.feature.main_screens.main_screen.presentation
 
 import android.content.Context
-import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,8 +13,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -54,14 +51,21 @@ fun MainScreen(
             LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.padding(horizontal = 16.dp)
+                modifier = Modifier.padding(horizontal = 16.dp),
+                contentPadding = PaddingValues(
+                    vertical = 16.dp
+                )
             ) {
-                items(latestMovies.itemSnapshotList.items, key = { it.id }) { item ->
-                    val movie by mainScreenVM.getMovieById(item.id).collectAsState()
-
+                items(latestMovies.itemSnapshotList.items, key = { it.id }) { movie ->
                     MoviePreviewUi(
                         moviePreview = movie
                     )
+                }
+
+                item {
+                    if(latestMovies.loadState.append is LoadState.Loading) {
+                        CircularProgressIndicator()
+                    }
                 }
             }
         }

@@ -57,7 +57,7 @@ android {
 
 dependencies {
 
-    //Connect feature module
+    //Connect modules
     implementation(project(":feature"))
     implementation(project(":core"))
 

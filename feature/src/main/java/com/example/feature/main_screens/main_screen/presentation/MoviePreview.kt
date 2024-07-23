@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -17,16 +16,15 @@ import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.text.style.LineBreak
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.max
 import coil.compose.AsyncImage
-import com.example.core.data.models.movie.MoviePreview
+import com.example.core.data.models.latest_movies_responce.Movie
 import com.example.core.ui.theme.mColors
 import com.example.core.ui.theme.mShapes
 import com.example.core.ui.theme.mTypography
 
 @Composable
 fun MoviePreviewUi(
-    moviePreview: MoviePreview
+    moviePreview: Movie
 ) {
     Row(
         modifier = Modifier

@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.example.feature.bars.MainScreenTopBar
 import com.example.feature.bars.MainScreensBottomBar
 import com.example.feature.main_screens.bookmarks_screen.navigation.bookmarksScreen
 import com.example.feature.main_screens.main_screen.navigation.MainScreenRoute
@@ -20,6 +21,9 @@ fun NavGraph() {
             .fillMaxSize(),
         bottomBar = {
             MainScreensBottomBar(navController = navController)
+        },
+        topBar = {
+            MainScreenTopBar()
         }
     ) { innerPadding ->
         NavHost(

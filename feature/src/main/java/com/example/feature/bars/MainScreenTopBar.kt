@@ -2,7 +2,10 @@ package com.example.feature.bars
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.SearchBar
@@ -43,40 +47,47 @@ fun MainScreenTopBar() {
         targetValue = if(active) 0.dp else 16.dp,
         label = "Search bar padding"
     )
-    SearchBar(
-        query = query,
-        onQueryChange = { query = it },
-        onSearch = {  },
-        active = active,
-        onActiveChange = { active = it },
-        placeholder = {
-            Text(
-                text = "Find movie",
-                style = mTypography.labelLarge
-            )
-        },
-        leadingIcon = {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_magnifier),
-                contentDescription = null,
-                modifier = Modifier.size(20.dp)
-            )
-        },
-        trailingIcon = {
-            if(active) {
-                IconButton(
-                    onClick = { active = false }
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.ic_cross),
-                        contentDescription = null
-                    )
-                }
-            }
-        },
-        tonalElevation = 0.dp,
-        modifier = Modifier.padding(horizontal = searchBarPadding)
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        SearchBar(
+            query = query,
+            onQueryChange = { query = it },
+            onSearch = {  },
+            active = active,
+            onActiveChange = { active = it },
+            placeholder = {
+                Text(
+                    text = "Find movie",
+                    style = mTypography.labelLarge
+                )
+            },
+            leadingIcon = {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_magnifier),
+                    contentDescription = null,
+                    modifier = Modifier.size(20.dp)
+                )
+            },
+            trailingIcon = {
+                if(active) {
+                    IconButton(
+                        onClick = { active = false }
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.ic_cross),
+                            contentDescription = null
+                        )
+                    }
+                }
+            },
+            tonalElevation = 0.dp,
+            modifier = Modifier.padding(horizontal = searchBarPadding)
+        ) {
 
+        }
+
+        HorizontalDivider(thickness = 1.dp, color = mColors.surface)
     }
 }

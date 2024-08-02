@@ -12,4 +12,11 @@ interface MainScreenApiInstance {
         @Query("page") page: Int,
         @Header("Authorization") apiKey: String
     ): MoviesResponse
+
+    @GET("search/movie")
+    suspend fun getMoviesByQuery(
+        @Query("page") page: Int,
+        @Query("query") query: String,
+        @Header("Authorization") apiKey: String
+    ): MoviesResponse
 }

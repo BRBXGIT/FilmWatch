@@ -7,4 +7,6 @@ import kotlinx.coroutines.flow.Flow
 interface MainScreenRepo {
 
     fun getAllMovies(): Flow<PagingData<Movie>>
+
+    fun getMoviesByQuery(query: String): Flow<PagingData<Movie>>
 }

@@ -7,7 +7,7 @@ import com.example.core.utils.Utils
 import retrofit2.HttpException
 import java.io.IOException
 
-class MoviesPagingSource(
+class LatestMoviesPagingSource(
     private val mainScreenApiInstance: MainScreenApiInstance
 ): PagingSource<Int, Movie>() {
     override fun getRefreshKey(state: PagingState<Int, Movie>): Int? {
